@@ -7,12 +7,16 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "test:regexp": "set NODE_MODE=regexp& node -r ./streets/regexVSIndexOf.js -e ;",
     "test:indexof": "node -r ./streets/regexVSIndexOf.js -e ;",
-    "test:streets": "node -r ./streets/streets.js -e ;"
+    "test:streets": "node -r ./streets/streets.js -e ;",
+    "test:emitter": "node -r ./emitter/emitterTest.js -e ;"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "node-fetch": "^2.1.2"
+  },
+  "devDependencies": {
+    "faker": "^4.1.0"
   }
 }

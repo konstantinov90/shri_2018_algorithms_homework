@@ -4,7 +4,6 @@ class Emitter {
     }
 
     on(event, handler) {
-       // TODO: подписать
         let handlers = this.eventHandlersMap.get(event);
         if (!handlers) {
             handlers = [];
@@ -14,7 +13,6 @@ class Emitter {
     }
     
     off(event, handler) {
-        // TODO: отписать
         const handlers = this.eventHandlersMap.get(event);
         if (!handlers) {
             return;
@@ -28,7 +26,6 @@ class Emitter {
     }
     
     emit(event) {
-        // TODO: обработка события
         const handlers = this.eventHandlersMap.get(event);
         if (!handlers) {
             return;
@@ -43,16 +40,5 @@ class Emitter {
     }
  }
  
-//  const handler = function () {
-//    // что-то делаем
-//  };
- 
-//  // подписали
-//  emitter.on('event', handler);
-//  // обработали событие
-//  emitter.emit('event');
-//  // отписали
-//  emitter.off('event', handler);
-
 module.exports = Emitter;
  

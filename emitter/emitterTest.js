@@ -1,5 +1,6 @@
 const fetch = require('node-fetch');
 
+const { randomNumber } = require('../utils');
 const Emitter = require('./Emitter');
 
 const emitter = new Emitter();
@@ -11,7 +12,7 @@ function getYaRu() {
 }
 
 function calculateRandomSum() {
-    const arrSize = Math.floor(Math.random()*90) + 10; // случайное число от 10 до 100
+    const arrSize = randomNumber(90) + 10; // случайное число от 10 до 100
     let sum = 0;
     for (let i = 0; i < arrSize; i++) {
         sum += Math.random();
@@ -21,7 +22,8 @@ function calculateRandomSum() {
 
 emitter.on('event', getYaRu);
 emitter.on('event', calculateRandomSum);
-emitter.emit('event').then(()=>{
+
+emitter.emit('event').then(() => {
     emitter.off('event', getYaRu);
     emitter.emit('event').then(() => {
         console.log('ok');

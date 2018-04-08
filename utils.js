@@ -1,4 +1,4 @@
-const alphabet = '1234567890абвгдежзиклмнопрстуфхцчшщъыьэюя';
+const alphabet = 'abcdefghijklmnopqrstuvwxyz ';
 
 function randomNumber(n) {
   return Math.round(Math.random() * n)
