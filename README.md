@@ -1,2 +1,2 @@
-* [EventEmitter](emitter/README.md)
-* [Suggest](streets/README.md)
+* [EventEmitter](emitter)
+* [Suggest](streets)
