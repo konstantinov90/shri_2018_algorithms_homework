@@ -48,5 +48,6 @@ emitter.off('event', handler);
 
 Пример работы эмиттера можно посмотреть, выполнив
 ```
+npm i
 npm run test:emitter
 ```
